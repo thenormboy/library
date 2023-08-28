@@ -8,6 +8,37 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <table>
+        <tr>
+            <td>Title</td>
+            <td>Author</td>
+            <td>Pages</td>
+            <td>Read</td>
+        </tr>
+    </table>
+    <form action="#" method="post">
+        <div class="book-info">
+            <div>
+                <label for="book_title"></label>
+                <input type="text" id="book_title" name="book_title" placeholder="Title" required>
+            </div>
+
+            <div>
+                <label for="book_author"></label>
+                <input type="text" id="book_author" name="book_author" placeholder="Author" required>
+            </div>
+
+            <div>
+                <label for="book_pages"></label>
+                <input type="number" id="book_pages" name="book_pages" placeholder="Pages" required>
+            </div>
+
+            <div>
+                <label for="book_read">Read</label>
+                <input type="checkbox" id="book_read" name="book_read" required>
+            </div>
+        </div>
+        <button>Submit</button>
+    </form>
 </body>
 </html>
