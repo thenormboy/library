@@ -15,9 +15,12 @@ Book.prototype.isRead = function() {
     }
 }
 
-function addBookToLibrary() {
-
+function addBookToLibrary(book) {
+    myLibrary.push(book);
 }
 
 const book1 = new Book('The Adamantine Narsus', 'Johannes Korantin', 213, true);
+addBookToLibrary(book1);
+
+console.log(myLibrary);
 
