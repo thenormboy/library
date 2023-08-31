@@ -67,8 +67,18 @@ function displayCells(library) {
     
         display_pages.innerText = value.pages
         content.appendChild(display_pages)
+
+        const read_checkbox = document.createElement('input')
+        read_checkbox.setAttribute('type', 'checkbox')
+
+        if (value.read === true) {
+            read_checkbox.setAttribute('checked', '')
+        }
+
+        display_read.appendChild(read_checkbox)
+
     
-        display_read.innerText = value.read
+
         content.appendChild(display_read)
     
         remove_button.innerText = 'x'
@@ -115,9 +125,7 @@ function clickRemove(removeButtonIndex) {
             value.toBeRemoved = true;
         }
     }
-
     element.remove();
-
 }
 
 const book1 = new Book('The Adamantine Narsus', 'Johannes Korantin', 213, true, libIndex, false, false);
